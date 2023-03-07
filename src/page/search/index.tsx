@@ -16,11 +16,11 @@ const SearchPage = () => {
       const newOccorences = MovieList.filter(
         (item) =>
           item.name.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1
-      ).sort();
+      );
 
       setOccorencesList(newOccorences);
     } else {
-      setOccorencesList(MovieList.sort());
+      setOccorencesList(MovieList);
     }
   }, [searchValue]);
 
