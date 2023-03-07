@@ -10,7 +10,13 @@ const SearchField: React.FC<InputProps> = ({ onChange }) => {
     onChange(e.target.value || "");
   };
 
-  return <S.InputSearch type="text" onChange={onChangeValue} />;
+  return (
+    <S.InputSearch
+      type="text"
+      onChange={onChangeValue}
+      placeholder="Type a movie name"
+    />
+  );
 };
 
 export default SearchField;
